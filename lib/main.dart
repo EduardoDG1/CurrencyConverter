@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:currency_converter/HomePage.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+const String request = "https://api.hgbrasil.com/finance?key=d31bf6a9";
+
 
 void main() {
   runApp(const MyApp());
@@ -20,3 +26,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
+Future<Map> getData() async {
+
+  var response = await http.get(Uri.parse(request));
+  var data;
+
+  data = jsonDecode(response.body);
+  return data;
+
+}
