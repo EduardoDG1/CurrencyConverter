@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:currency_converter/HomePage.dart';
+import 'package:currency_converter/homePage.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-const String request = "https://api.hgbrasil.com/finance?key=d31bf6a9";
+const String request = "https://api.hgbrasil.com/finance?key=3d7fbcbd";
 
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Currency Converter',
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
